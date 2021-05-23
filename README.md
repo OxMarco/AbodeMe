@@ -17,7 +17,7 @@
   <p align="center">
   Rent and let guest houses in a decentralised, secure and permissionless way<br />
     <br />
-    <a href="https://abode.me">View Demo</a>
+    <a href="https://grcasanova.github.io/AbodeMe">View Demo</a>
     ·
     <a href="https://github.com/grcasanova/AbodeMe/BUG-TEMPLATE.md">Report Bug</a>
     ·
@@ -65,12 +65,18 @@ That's why we have created *AbodeMe*. A decentralised platform that allows you t
 Upon starting the rental period, the tenant will be given the keycode to unlock the safety box with the entrance key, stored in *Secret Network* and burned after reading. In this way, the landlord doesn't have to always be present for the tenant and let them in.
 Finally, by having the dapp run on *Polygon* we were able to reduce gas costs by approximately 70%, minting the NFT containing the property data costs just a fraction of dollar compared to the $60-80 figure in Ethereum mainnet.
 
+Superfluid cashflows in xDAI allow capital value to be preserved from market fluctuations and can pave the way for a future implementation of a Polygon/xDAI bridge using *xPollinate*.
+
 A few key features of the platform:
 * completely decentralised
 * privacy preserving
 * security by default
 * collateral deposit as insurance
 * pay as you go, no hidden fees
+
+### Future Ideas
+Surely an integral part of the next development phase will be to debug Superfluid cashflows and port them to the *RentalToken* smart contract in order to avoid manipulation from the frontend as well as provide a better user experience. Secondly, users should be able to pay with Torus only, thus making Keplr wallet obsolete in the expected workflow towards a cleaner and more immediate user-centric interface.
+Lastly, collaterals should be invested into yield farming protocols like *Aave* to generate a revenue to keep the dapp alive without having to charge users for the service.
 
 ### Built With
 
@@ -105,6 +111,8 @@ To setup the development environment, run the following commands:
   npm install --global yarn@latest
   ```
 
+You will also need to have some test MATIC tokens in your Torus wallet and to have installed [Keplr](https://wallet.keplr.app/#/dashboard) wallet with Secret Network switched on.
+
 ### Installation
 
 To install the repository and run it locally:
@@ -125,7 +133,7 @@ To install the repository and run it locally:
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Using *AbodeMe* is very simple, just head off the [Homepage]() and login with your Torus wallet. On the _rent_ page you can see a list of all properties to let and their location pinpointed on a map while on the _let_ page you can list your property and start earning. Once a new tenant accepts the rental agreement you will both receive a welcome email to exchange contacts and you're good to go.
+Using *AbodeMe* is very simple, just head off the [Homepage](https://grcasanova.github.io/AbodeMe) and login with your Torus wallet. On the _rent_ page you can see a list of all properties to let and their location pinpointed on a map while on the _let_ page you can list your property and start earning. Once a new tenant accepts the rental agreement you will both receive a welcome email to exchange contacts and you're good to go.
 In the _dashboard_ you can find all your properties to let and the ones you're currently renting and eventually stop the rental agreement once you want to leave the guest house.
 
 <!-- ROADMAP -->
@@ -152,7 +160,12 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Web Link: [Homepage]()
+Web Link: [Homepage](https://grcasanova.github.io/AbodeMe)
+
+<!-- AUTHORS -->
+## Authors
+* [grcasanova](https://github.com/grcasanova)
+* [metypes](https://github.com/metypes)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
