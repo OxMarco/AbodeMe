@@ -47,7 +47,7 @@ export default class Info extends Component {
 
             const sfUser = sf.user({
                 address: this.props.address,
-                token: '0x5943F705aBb6834Cad767e6E4bB258Bc48D9C947'
+                token: '0x15F0Ca26781C3852f8166eD2ebce5D18265cceb7'
             });
 
             //const details = await sfUser.details();

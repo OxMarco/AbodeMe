@@ -46,16 +46,16 @@ export default class Dashboard extends Component {
 
         const owner = sf.user({
             address: token.owner,
-            token: '0x5943F705aBb6834Cad767e6E4bB258Bc48D9C947'
+            token: '0x15F0Ca26781C3852f8166eD2ebce5D18265cceb7'
         });
 
         const tenant = sf.user({
             address: token.tenant,
-            token: '0x5943F705aBb6834Cad767e6E4bB258Bc48D9C947'
+            token: '0x15F0Ca26781C3852f8166eD2ebce5D18265cceb7'
         });
 
         sf.cfa.deleteFlow({
-            superToken: '0x5943F705aBb6834Cad767e6E4bB258Bc48D9C947',
+            superToken: '0x15F0Ca26781C3852f8166eD2ebce5D18265cceb7',
             sender: tenant,
             receiver: owner,
             by: this.state.address,
