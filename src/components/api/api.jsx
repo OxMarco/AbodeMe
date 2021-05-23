@@ -72,7 +72,7 @@ export default class Api {
     }
 
     rent(tokenId, collateral) {
-        return this.contract.methods.startRent(tokenId).send({from: this.address, value: this.web3.toWei(collateral)});
+        return this.contract.methods.startRent(tokenId).send({from: this.address, value: this.web3.utils.toWei(collateral)});
     }
 
     leave(tokenId) {

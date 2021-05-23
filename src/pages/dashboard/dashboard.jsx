@@ -38,6 +38,7 @@ export default class Dashboard extends Component {
     }
 
     async unrent(token) {
+        await this.props.api.leave(token.id);
 
         const sf = new SuperfluidSDK.Framework({
             web3: this.props.web3,
@@ -60,8 +61,6 @@ export default class Dashboard extends Component {
             receiver: owner,
             by: this.state.address,
         });
-
-        this.props.api.leave(token.id);
     }
 
     render() {

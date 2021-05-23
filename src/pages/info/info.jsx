@@ -30,6 +30,16 @@ export default class Info extends Component {
     async rent(token) {
         this.setState({ disabled: false });
 
+        let data = await this.props.api.rent(token.id, token.collateral);
+        console.log(data);
+
+        let secretNetwork = new Secret();
+        await secretNetwork.getHandle();
+        let secretResponse = secretNetwork.get(data[0]);
+        let secretResult = JSON.parse(String.fromCharCode(...secretResponse.data));
+
+        this.setState({ disabled: false, show: true, code: secretResult?.burn_nft?.secret?.description });
+
         if(token.price > 0) {
             const apiRes = await fetch('https://min-api.cryptocompare.com/data/price?fsym=USD&tsyms=ETH');
             const rates = await apiRes.json();
@@ -57,16 +67,7 @@ export default class Info extends Component {
                 flowRate: pricePerSecondWEI,
             });
         }
-
-        let data = this.props.api.rent(token.id, token.collateral);
-        console.log(data);
         
-        let secretNetwork = new Secret();
-        await secretNetwork.getHandle();
-        let secretResponse = secretNetwork.get(data[0]);
-        let secretResult = JSON.parse(String.fromCharCode(...secretResponse.data));
-
-        this.setState({ disabled: false, show: true, code: secretResult?.burn_nft?.secret?.description });
     }
 
     render() {
@@ -111,7 +112,7 @@ export default class Info extends Component {
                                         <span className="ipn-subtitle">{token.region}, {token.country}</span>
                                         <h2>{token.title}</h2>
                                         <p>{token.description}</p>
-                                        <button type="submit" onClick={() => this.rent(token)}  class="btn btn-primary block">RENT NOW</button>
+                                        <button type="submit" onClick={() => this.rent(token)}  className="btn btn-primary block">RENT NOW</button>
                                     </div>
                                 </div>
                             </div>
