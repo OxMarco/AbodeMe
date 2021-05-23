@@ -17,7 +17,7 @@
   <p align="center">
   Rent and let guest houses in a decentralised, secure and permissionless way<br />
     <br />
-    <a href="https://abode.me">View Demo</a>
+    <a href="https://grcasanova.github.io/AbodeMe/">View Demo</a>
     ·
     <a href="https://github.com/grcasanova/AbodeMe/BUG-TEMPLATE.md">Report Bug</a>
     ·
